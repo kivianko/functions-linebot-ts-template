@@ -20,7 +20,7 @@ $ git clone https://github.com/kivianko/functions-linebot-ts-template.git
 $ cd functions && npm install
 ```
 
-### 3. .firebaserc を書き換える
+### 3. ルートディレクトリに移動して、.firebaserc を書き換える
 
 ```
 {
@@ -32,7 +32,10 @@ $ cd functions && npm install
 
 ### 4. functions ディレクトリで環境変数を設定する。
 
+functions の中に移動させる。
+
 ```
+$ cd functions
 $ touch .runtimeconfig.json
 ```
 
