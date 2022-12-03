@@ -4,12 +4,12 @@ import { errorMessage } from "../utils/common";
 import { client } from "../utils/line";
 
 export const messageHundler = async (event: MessageEvent) => {
-  let messageData: Message | undefined;
+  let replyMessage: Message | undefined;
 
   const userId = event.source.userId;
 
   if (!userId) {
-    messageData = errorMessage;
+    replyMessage = errorMessage;
     return;
   }
 
@@ -17,18 +17,18 @@ export const messageHundler = async (event: MessageEvent) => {
     case "text":
       const userMessage = event.message.text;
       if (userMessage === "テスト") {
-        messageData = {
+        replyMessage = {
           type: "text",
           text: "テスト",
         };
       }
       if (userMessage === "ポストバックテスト") {
         const postbackTest = createPostbackTest();
-        messageData = postbackTest;
+        replyMessage = postbackTest;
       }
       break;
   }
 
-  if (messageData) client.replyMessage(event.replyToken, messageData);
+  if (replyMessage) client.replyMessage(event.replyToken, replyMessage);
   else return;
 };
