@@ -11,16 +11,29 @@ Firebase Functions × TypeScript × LINEBOT SDK のテンプレート
 ### 1. リポジトリクローン
 
 ```
-$ git clone https://github.com/kivianko/functions-linebot-ts-template.git
+$ git clone https://github.com/kivianko/functions-linebot-ts-template.git <プロジェクトのディレクトリ>
 ```
 
-### 2. パッケージをインストール
+### 2. ディレクトリに移動
+```
+$ cd <プロジェクトのディレクトリ>
+```
+
+### 3. .gitを初期化
+```
+$ rm -rf ./.git/
+```
+```
+$ git init
+```
+
+### 4. パッケージをインストール
 
 ```
 $ cd functions && npm install
 ```
 
-### 3. ルートディレクトリに移動して、.firebaserc を書き換える
+### 5. ルートディレクトリに移動して、.firebaserc を書き換える
 
 ```
 {
@@ -30,7 +43,7 @@ $ cd functions && npm install
 }
 ```
 
-### 4. functions ディレクトリで環境変数を設定する。
+### 6. functions ディレクトリで環境変数を設定する。
 
 functions の中に移動させる。
 
@@ -56,7 +69,7 @@ firebase config に set する。
 $ npm run config
 ```
 
-### 5. デプロイ
+### 7. デプロイ
 
 ```
 firebase deploy --only functions
