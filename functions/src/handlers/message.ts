@@ -4,7 +4,7 @@ import { errorMessage } from "../utils/common";
 import { client } from "../utils/line";
 
 export const messageHundler = async (event: MessageEvent) => {
-  let replyMessage: Message | undefined;
+  let replyMessage: Message | Message[] | undefined;
 
   const userId = event.source.userId;
 

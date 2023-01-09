@@ -6,7 +6,7 @@ export const postbackHundler = async (event: PostbackEvent) => {
   const data = JSON.parse(event.postback.data);
   const action = data.action;
 
-  let replyMessage: Message | undefined;
+  let replyMessage: Message | Message[] | undefined;
 
   const userId = event.source.userId;
   if (!userId) {
