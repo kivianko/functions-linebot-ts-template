@@ -4,7 +4,7 @@ Firebase Functions × TypeScript × LINEBOT SDK のテンプレート
 
 ## 実行環境
 
-`Node 16`
+`Node 18`
 
 ## 初期設定
 
@@ -15,14 +15,17 @@ $ git clone https://github.com/kivianko/functions-linebot-ts-template.git <プ�
 ```
 
 ### 2. ディレクトリに移動
+
 ```
 $ cd <プロジェクトのディレクトリ>
 ```
 
-### 3. .gitを初期化
+### 3. .git を初期化
+
 ```
 $ rm -rf ./.git/
 ```
+
 ```
 $ git init
 ```
