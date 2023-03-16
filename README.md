@@ -75,5 +75,30 @@ $ npm run config
 ### 7. デプロイ
 
 ```
-firebase deploy --only functions
+npm run deploy
+```
+
+# ローカル環境構築
+
+エミュレーターとその他必要なものがあれば追加する。
+(ex: firestore など)
+
+```bash
+firebase init
+```
+
+---
+
+※新しいターミナルで下記コマンドを順次実行
+
+```bash
+cd functions && firebase emulators:start --import ../data --export-on-exit
+```
+
+```bash
+ngrok http 5001
+```
+
+```bash
+cd functions && npm run build -- --watch
 ```
